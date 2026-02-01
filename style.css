@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #232323;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: #48bfff;
+    color: white;
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tenemos cuatro columnas para repartir los elementos */
+    gap: 0.5rem; /* Separación de los botones */
+    box-shadow: 0 0 20px #48bfff;
+}
+
+.pantalla {
+    grid-column: 1 / 5; /* Definimos las posiciones que va a ocupar la pantalla */
+    background-color: #090c31;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right; /* Carga el número de la pantalla a la derecha */
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-family: monospace; /* Tipo de letra */
+    font-weight: bold; /* Poner los números de la pantalla en negritas */
+}
+
+.btn {
+    background-color: #006da7;
+    color: white;
+    border: 0;
+    padding: 1rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover { /* Cambiar el color del boton al pasar el cursor sobre alguno */
+    background-color: #004f78;
+}
+
+#cero { /* Modificar el botón cero */
+    grid-column: span 2; /* Ahora el botón ocupa 2 espacios */
+}
+
+#igual {/* Modificar el botón igual */
+    grid-row: span 2; /* Ahora el bottón ocupa 2 espacios de las filas */
+    background-color: #e65766;
+}
+
+#igual:hover{
+    background-color: #e6394a;
+}
